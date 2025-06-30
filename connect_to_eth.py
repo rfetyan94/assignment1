@@ -43,9 +43,9 @@ if __name__ == "__main__":
         w3, contract = connect_with_middleware("contract_info.json")
         print("Connected to BSC testnet and contract")
 
-        # Use placeholder address unless instructed otherwise
-        address = "0x0000000000000000000000000000000000000000"
-        count = contract.functions.getCountByOwner(address).call()
+        # Replace with a valid address if known
+        test_address = "0x0000000000000000000000000000000000000000"
+        count = contract.functions.getCountByOwner(test_address).call()
         print(count)
     except Exception as e:
         print("Error:", e)
