@@ -11,7 +11,7 @@ infura_url  = f"https://mainnet.infura.io/v3/{infura_token}"
 '''
 
 def connect_to_eth():
-    url = "https://data-seed-prebsc-1-s1.binance.org:8545/"
+    url = "https://eth-mainnet.g.alchemy.com/v2/LgjiTyR8VGX0vSKwgZkDdXlBchzkM8Zj"
     w3 = Web3(HTTPProvider(url))
     w3.middleware_onion.inject(ExtraDataToPOAMiddleware, layer=0)
     assert w3.is_connected(), f"Failed to connect to provider at {url}"
