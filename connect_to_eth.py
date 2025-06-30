@@ -11,10 +11,10 @@ infura_url  = f"https://mainnet.infura.io/v3/{infura_token}"
 '''
 
 def connect_to_eth():
-    url = "https://rpc.ankr.com/eth"
-    w3 = Web3(HTTPProvider(url))
-    assert w3.is_connected(), f"Failed to connect to provider at {url}"
-    return w3
+	url = "https://data-seed-prebsc-1-s1.binance.org:8545/" # FILL THIS IN (for example, Infura or Alchemy Ethereum Mainnet)
+	w3 = Web3(HTTPProvider(url))
+	assert w3.is_connected(), f"Failed to connect to provider at {url}"
+	return w3
 
 
 def connect_with_middleware(contract_json):
