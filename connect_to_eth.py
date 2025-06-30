@@ -39,13 +39,4 @@ def connect_with_middleware(contract_json):
 
 
 if __name__ == "__main__":
-    try:
-        w3, contract = connect_with_middleware("contract_info.json")
-        print("Connected to BSC testnet and contract")
-
-        # Replace with a valid address if known
-        test_address = "0x0000000000000000000000000000000000000000"
-        count = contract.functions.getCountByOwner(test_address).call()
-        print(count)
-    except Exception as e:
-        print("Error:", e)
+  connect_to_eth()
