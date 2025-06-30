@@ -39,4 +39,13 @@ def connect_with_middleware(contract_json):
 
 
 if __name__ == "__main__":
-	connect_to_eth()
+    w3, contract = connect_with_middleware("contract_info.json")
+    
+    # Replace with a valid address if needed — you can use your own wallet address for testing
+    test_address = "0x0000000000000000000000000000000000000000"
+
+    try:
+        result = contract.functions.getCountByOwner(test_address).call()
+        print("getCountByOwner:", result)
+    except Exception as e:
+        print("Error calling getCountByOwner:", e)
