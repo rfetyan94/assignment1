@@ -1,6 +1,6 @@
 import json
 from web3 import Web3
-from web3.middleware import geth_poa_middleware  
+from web3.middleware import ExtraDataToPOAMiddleware
 from web3.providers.rpc import HTTPProvider
 
 '''
